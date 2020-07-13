@@ -1,0 +1,41 @@
+﻿@page
+@model ComprandoNicaragua.Pages.AgregarEmprendimiento.AgregarEmprendimientoModel
+@{
+    ViewData["Title"] = "AgregarEmprendimiento";
+}
+
+<br />
+<section id="AgregarEmprendimiento" class="about">
+    <div class="container">
+
+        @*<form method="post" class="php-email-form mt-4">*@
+        <form method="post">
+
+            <div class=" col-md-6 form-group">
+                <label>Categoria</label>
+                <select asp-for="Tiendas.IdCategoria" class="form-control"
+                        asp-items="@Model.CatCategorias">
+                    <option value="">-- Selecciona --</option>
+                </select>
+                <span asp-validation-for="Tiendas.IdCategoria" class="text-danger"></span>
+
+            </div>
+
+            <div class="col-md-6 form-group">
+                <label>Cuenta Instagram</label>
+
+                <input type="text" class="form-control" asp-for="Tiendas.CuentaInstagram" />
+                <span asp-validation-for="Tiendas.CuentaInstagram"  class="text-danger"></span>
+            </div>
+           
+
+            @*<div class="text-center"><button type="submit" value="Create">Guardar</button></div>*@
+            <div class="text-center"><input type="submit" value="Guardar" /></div>
+
+
+
+        </form>
+
+
+    </div>
+</section>
